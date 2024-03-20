@@ -34,12 +34,12 @@
 						<div class="sidebar-small-cap">Extra</div>
 					</li>
 					<li>
-						<a href="https://aci.edu.gh/" class="dropdown-toggle no-arrow">
+						<a href="" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-edit-2"></span><span class="mtext">Visit Us</span>
 						</a>
 					</li>
 					<li>
-						<a href="https://aci.edu.gh/faculty" class="dropdown-toggle no-arrow">
+						<a href="" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-paper-plane1"></span>
 							<span class="mtext">Faculty </span>
 						</a>
