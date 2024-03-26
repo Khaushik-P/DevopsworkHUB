@@ -35,11 +35,26 @@ pipeline{
                 sh "trivy fs . > trivyfs.txt"
             }
         }
-        stage('Build Docker Image') {
+        stage('Check Docker Compose') {
+            when { expression { params.action == 'create'}}  
             steps {
                 script {
-                    // Build the Docker image
-                    sh 'docker build -t DevopsWorkForceHub:latest .'
+                    def dockerComposeFile = fileExists('docker-compose.yml')
+                    if (dockerComposeFile) {
+                        echo 'Docker Compose file found.'
+                        // Run docker-compose up
+                        sh 'docker-compose up -d'
+                    } else {
+                        echo 'Docker Compose file not found.'
+                    }
+                }
+            }
+        }
+        stage('Delete Docker Image'){
+            when { expression { params.action == 'delete'}}  
+            steps{
+                script{
+                    sh "docker-compose down"
                 }
             }
         }

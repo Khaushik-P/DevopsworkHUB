@@ -3,7 +3,7 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>ACI Leave System</title>
+	<title>DevopsWorkForceHub</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="../vendors/images/apple-touch-icon.png">
